@@ -13,8 +13,8 @@ Parts of this sketch were taken from the keypad and servo sample sketches that c
 const byte servoCount = 10;
 const int OPEN_ALL = 100;
 const int CLOSE_ALL = 99;
-const int openPos = 165;
-const int closedPos = 5;
+const int openPos = 70;
+const int closedPos = 25;
 
 static Servo servoList[servoCount];
 int servoPins[servoCount] = { A0, A1, A2, A3, A4, A5, 2, 3, 4, 5 };
@@ -82,7 +82,7 @@ void setup() {
   servoList[8].attach(servoPins[8]);
   servoList[9].attach(servoPins[9]);
   
- // setServoState(CLOSE_ALL); //reset all servos
+  setServoState(CLOSE_ALL); //reset all servos
 }
 
 char key;
